@@ -54,7 +54,7 @@ class FlaskTestCase(unittest.TestCase):
             app.app.config['USERNAME'],
             app.app.config['PASSWORD']
         )
-        assert b'You were loggin in' in rv.data
+        assert b'You were logged in' in rv.data
         rv = self.logout()
         assert b'You were logged out' in rv.data
         rv = self.login(
