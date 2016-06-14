@@ -46,7 +46,7 @@ class FlaskTestCase(unittest.TestCase):
     def test_empty_db(self):
         """Ensure db is empty"""
         rv = self.app.get('/')
-        assert b'No entries here so far' in rv.data
+        assert b'No entries yet. Add some!' in rv.data
 
     def test_login_logut(self):
         """Test login and logout helper"""
